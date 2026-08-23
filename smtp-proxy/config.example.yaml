@@ -12,3 +12,14 @@ upstream:
 # ComplyMail backend API used to scan outbound email.
 backend:
   api_url: "http://api:8080"
+  # Timeout in seconds for each scan request to the backend. Defaults to 5.
+  timeout_seconds: 5
+
+# Where flagged/redirected emails are rerouted for manual review. Optional —
+# if unset, redirected emails are still header-stamped but delivered to
+# their original recipients.
+review:
+  mailbox: "review@example.com"
+
+# Address the metrics HTTP endpoint listens on. Defaults to ":2526".
+metrics_addr: ":2526"

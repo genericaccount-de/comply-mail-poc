@@ -8,3 +8,9 @@ upstream:
 
 backend:
   api_url: "http://api:8080"
+  timeout_seconds: 5
+
+review:
+  mailbox: "review@example.com"
+
+metrics_addr: ":2526"

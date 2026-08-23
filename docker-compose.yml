@@ -18,6 +18,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "2525:2525"
+      - "2526:2526"
     volumes:
       - ./smtp-proxy/config.yaml:/etc/complymail/config.yaml:ro
     depends_on:
